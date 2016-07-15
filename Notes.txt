@@ -50,3 +50,7 @@ db.mycol.find().pretty()
 
 Code Sample:
 https://github.com/mongodb/mongo-csharp-driver/tree/master
+
+…or push an existing repository from the command line
+git remote add origin https://github.com/WolfKeithC/MongoDBSample.git
+git push -u origin master
