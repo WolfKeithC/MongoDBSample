@@ -1,0 +1,52 @@
+﻿Mongo DB:
+https://www.mongodb.com/dr/fastdl.mongodb.org/win32/mongodb-win32-x86_64-2008plus-ssl-3.2.8-signed.msi/download
+http://www.tutorialspoint.com/mongodb/mongodb_environment.htm
+https://docs.mongodb.com/ecosystem/drivers/csharp/
+
+db.mycol.insert({ _id: ObjectId(7df78ad8902c), title: 'MongoDB Overview', description: 'MongoDB is no sql database',
+   by: 'tutorials point', url: 'http://www.tutorialspoint.com', tags: ['mongodb', 'database', 'NoSQL'], likes: 100 });
+
+2016-07-15T13:12:23.487-0700 E QUERY    [thread1] SyntaxError: identifier starts immediately after numeric literal @(shell):1:32
+
+
+
+db.mycol.insert({_id:ObjectId(7df78ad8902c),title:'MongoDB Overview',description:'MongoDB is no sql database',by:'tutorials point',url:'http://www.tutorialspoint.com',tags: ['mongodb', 'database', 'NoSQL'],likes: 100});
+
+db.post.insert([{
+      title: 'MongoDB Overview', 
+      description: 'MongoDB is no sql database',
+      by: 'tutorials point',
+      url: 'http://www.tutorialspoint.com',
+      tags: ['mongodb', 'database', 'NoSQL'],
+      likes: 100
+   },{ title: 'NoSQL Database', 
+      description: 'NoSQL database doesn\'t have tables',
+      by: 'tutorials point',
+      url: 'http://www.tutorialspoint.com',
+      tags: ['mongodb', 'database', 'NoSQL'],
+      likes: 20, 
+      comments: [	
+         {
+            user:'user1',
+            message: 'My first comment',
+            dateCreated: new Date(2013,11,10,2,35),
+            like: 0 
+         }
+      ]
+   }
+]);
+
+db.mycol.find().pretty() { "_id": ObjectId(57894a6366e6969082728ea8) };
+
+db.mycol.find().pretty()
+{
+   "title": "MongoDB Overview", 
+   "description": "MongoDB is no sql database",
+   "by": "tutorials point",
+   "url": "http://www.tutorialspoint.com",
+   "tags": ["mongodb", "database", "NoSQL"],
+   "likes": "100"
+};
+
+Code Sample:
+https://github.com/mongodb/mongo-csharp-driver/tree/master
